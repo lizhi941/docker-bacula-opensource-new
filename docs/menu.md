@@ -10,6 +10,7 @@
    - [bacula-dir-baculum](/docs/bacula-dir-baculum.md)
    - [bacula-fd](/docs/bacula-fd.md)
    - [bacula-sd](/docs/bacula-sd.md)
+- [exmples for using](/docs/exmples-for-using)
 - [The questions](/docs/questions.md)
 
 <a name="introduction"></a>    
