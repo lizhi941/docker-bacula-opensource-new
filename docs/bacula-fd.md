@@ -34,15 +34,43 @@ Ubuntu is copy from another github resitory
 
 
 
+
+
+
+
+
+
+
 <a name="alpine"></a>
-### alpine
+### [alpine](/bacula-fd/alpine)
+
+  * Dockerfile:  install bash  bacula-client(bacula-fd's package name)
+  
+  * bacula-fd.conf: especial director name and the allowed password
+  
+  * start.sh: a shell script to start a bacula-client container.
+
+
+
 
 
 
 <a name="debian"></a>
-### debian
+### [debian](/bacula-fd/debian)
 
+   * Dockerfile
+     
+     based on debian:jessie
+
+     compiler bacula with the optional "--enable-client-only".
+   
+   * scripts
+ 
+     include sources.list that contain the deb source in china,which can make 
+     
+     install dependencies fast.
+     
 
 
 <a name="ubuntu"></a>
-### ubuntu
+### [ubuntu](/bacula-fd/ubuntu)
