@@ -27,12 +27,12 @@ I try to use Docker to build a set of images.
 <a name="the architecture"></a>
 ## The architecture
 
-### what parts  is include?
+#### what parts  is include?
 
 Include bacula-db-mysql-data bacula-db-mysql bacula-dir bacula-dir-baculum bacula-fd bacula-sd.
 
 
-### relationship between parts 
+#### relationship between parts 
 
 you can know the relactions by the figure below
 
@@ -56,9 +56,9 @@ Bacula-dir means a director use command line,bacula-dir-baculum means a director
 
 
 
-## Why this architecture
+### Why this architecture
 
-### why not in  one but divide so many parts?
+#### why not in  one but divide so many parts?
 
 In fact, bacula-db-mysql-data bacula-db-mysql bacula-dir bacula-dir-baculum bacula-fd bacula-sd can run in one Host,
 
