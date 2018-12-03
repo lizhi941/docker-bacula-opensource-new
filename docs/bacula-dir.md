@@ -13,7 +13,9 @@ install the bacula-dir is easy.
 
 very familiar for.
 
+4: some system like debian is suitable for compiler using bacula source code, which make you
 
+can customise the  system and easy to use the latest bacula version.
 
 
 ## Different systems
@@ -21,10 +23,21 @@ very familiar for.
 
 ### Debian
 
+Advantages: We can use the latest verson source code of bacula. We are no need to waiting for
+
+the package.
+
+Disvantages: complex, large size image
+
+
+
 
 
 ### Alpine
 
+Advantages: the latest APK packages of bacula, and the smallest size images.
+
+Disvantages:no baculum-gui APK packeages
 
 #### divide into three steps
 
