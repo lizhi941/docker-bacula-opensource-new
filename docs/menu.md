@@ -27,13 +27,39 @@ I try to use Docker to build a set of images.
 <a name="the architecture"></a>
 ## The architecture
 
+### what parts  is include?
 
 Include bacula-db-mysql-data bacula-db-mysql bacula-dir bacula-dir-baculum bacula-fd bacula-sd.
 
+
+### relationship between parts 
+
 you can know the relactions by the figure below
 
+Bacula appliction interactions.
 ![](/docs/images/1-1.jpg)
 
+* Database server VS bacula-db-mysql-data bacula-db-mysql
+
+Of course you can use Postgresql or SQLLite but now use Mysql here.
+
+* Backup server VS bacula-dir or bacula-dir-baculum
+
+Bacula-dir means a director use command line,bacula-dir-baculum means a director use gui.  
+
+* Stoage server VS bacula-sd 
+
+* File server VS bacula-fd   
+
+
+
+
+
+### why not in  one but divide so many parts 
+
+In fact, bacula-db-mysql-data bacula-db-mysql bacula-dir bacula-dir-baculum bacula-fd bacula-sd can run in one Host,but when you have many Hosts
+ 
+,you may need to run them in deffirent host.
 
 <a name="why this architecture"></a>
 ## Why this architecture
