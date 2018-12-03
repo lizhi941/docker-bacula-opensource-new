@@ -1,0 +1,66 @@
+FROM debian:jessie
+
+ENV bacula_version=9.2.2
+
+ENV  scripts=/scripts
+
+ADD  ./scripts   /scripts
+
+#use apt-spy chose the fastest sources ,sometimes 
+#the debian official sourses not offen apt-spy ,so first need another source to install apt-spy
+
+RUN mv $scripts/sources.list /etc/apt   \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends apt-utils
+#echo "deb http://http.us.debian.org/debian/ stable main"  >> /etc/apt/sources.list \   
+
+#&& apt-spy -d stable -a asia -t 5 \
+   
+#&& cp /etc/apt/sources.list   /etc/apt/sources.list.bak \
+   
+#&& mv /etc/apt/sources.list.d/apt-spy.list   /etc/apt/sources.list \
+#&& apt-get update
+
+
+
+#install envirenment
+
+RUN apt-get install -y vim make gcc build-essential perl unp mc mtx  \
+       libreadline-dev libreadline-gplv2-dev zlib1g-dev lzop liblzo2-dev python-lzo sudo \
+       gawk gdb libacl1 libacl1-dev libssl-dev lsscsi apt-transport-https wget \
+    && apt-get install -y qt4-dev-tools qt4-qtconfig  libqt4-dev libqwt5-qt4 \
+       libqwt5-qt4-dev pkg-config gnupg
+
+
+
+#install bacula  client
+
+
+RUN cd /usr/src \
+    && wget --no-check-certificate "https://sourceforge.net/projects/bacula/files/bacula/"$bacula_version"/bacula-"$bacula_version".tar.gz" \
+    && tar xvzf "bacula-"$bacula_version".tar.gz" -C /usr/local/ \
+    && cd "/usr/local/bacula-"$bacula_version \
+    && ./configure \
+         --enable-smartalloc \
+         --enable-client-only \
+         --without-openssl \
+         --with-readline=/usr/include/readline \
+         --sysconfdir=/etc/bacula \
+         --bindir=/usr/bin \
+         --sbindir=/usr/sbin \
+         --with-scriptdir=/etc/bacula/scripts \
+         --with-plugindir=/etc/bacula/plugins \
+         --with-pid-dir=/var/run \
+         --with-subsys-dir=/etc/bacula/working \
+         --with-working-dir=/etc/bacula/working \
+         --with-bsrdir=/etc/bacula/bootstrap \
+         --with-systemd \
+         --disable-conio \
+         --disable-nls \
+         --with-logdir=/var/log/bacula \
+         --with-dump-email=lizhi941@sohu.com \
+         --with-job-email=lizhi941@sohu.com  \
+    && make -j 8 \
+    && make install
+
+CMD ["bash"]
