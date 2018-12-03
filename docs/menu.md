@@ -24,7 +24,7 @@ But it seems to a bit difficult to deploy it on linux system.And so In order to 
 
 I try to use Docker to build a set of images.  
 
-<a name="the architecture"></a>
+<a name="the-architecture"></a>
 ## The architecture
 
 #### what parts  is include?
@@ -55,7 +55,7 @@ Bacula-dir means a director use command line,bacula-dir-baculum means a director
 
 
 
-
+<a name="why-this-architecture"></a>
 ### Why this architecture
 
 #### why not in  one but divide so many parts?
