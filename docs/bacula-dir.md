@@ -39,6 +39,14 @@ Advantages: the latest APK packages of bacula, and the smallest size images.
 
 Disvantages:no baculum-gui APK packeages
 
+* why select the image of Edge version of Alpine?
+
+Because I found I only can find the lastest version APK packages in Edge version of Alpine.
+
+The website  for looking forword the APK packages is [here](https://pkgs.alpinelinux.org/packages).
+
+
+
 #### divide into three steps
 
 why divide into three steps ?
@@ -70,15 +78,3 @@ just install bacula(In fact this bacula APK include bacula-dir,bacula-sd,bacula-
 Optionally, when you are familiar with Dockerfile, you can complete the above three
 
 steps in one step.
-
-  
-
-
-
-
-* why select the image of Edge version of Alpine?
-
-Because I found I only can find the lastest version APK packages in Edge version of Alpine.
-
-The website  for looking forword the APK packages is [here](https://pkgs.alpinelinux.org/packages). 
-
