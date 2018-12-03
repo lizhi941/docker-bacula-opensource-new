@@ -37,9 +37,10 @@ Include bacula-db-mysql-data bacula-db-mysql bacula-dir bacula-dir-baculum bacul
 you can know the relactions by the figure below
 
 Bacula appliction interactions.
+
 ![](/docs/images/1-1.jpg)
 
-* Database server VS bacula-db-mysql-data bacula-db-mysql
+* Database server VS bacula-db-mysql-data and  bacula-db-mysql
 
 Of course you can use Postgresql or SQLLite but now use Mysql here.
 
@@ -55,14 +56,15 @@ Bacula-dir means a director use command line,bacula-dir-baculum means a director
 
 
 
-### why not in  one but divide so many parts 
-
-In fact, bacula-db-mysql-data bacula-db-mysql bacula-dir bacula-dir-baculum bacula-fd bacula-sd can run in one Host,but when you have many Hosts
- 
-,you may need to run them in deffirent host.
-
-<a name="why this architecture"></a>
 ## Why this architecture
+
+### why not in  one but divide so many parts?
+
+In fact, bacula-db-mysql-data bacula-db-mysql bacula-dir bacula-dir-baculum bacula-fd bacula-sd can run in one Host,
+
+but when you have many Hosts,you may need to run them in deffirent host. Most insituations, you have one bacula-dir(bacula-dir-baculum) Host
+
+but some bacula-fd hosts, bacula-sd hosts, independly database host.
 
 
 
