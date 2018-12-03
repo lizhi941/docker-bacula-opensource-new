@@ -44,7 +44,7 @@ And install the bash.
 just install  mysql that is required by bacula.
 
 
-* [three-step](/bacula-dir/Alpine/three-step)
+* [third-step](/bacula-dir/Alpine/third-step)
 
 just install bacula(In fact this bacula APK include bacula-dir,bacula-sd,bacula-fd)
 
