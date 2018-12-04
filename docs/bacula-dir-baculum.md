@@ -24,3 +24,10 @@
     * Files in scripts directory are come from http://www.bacula.org
 
     * we also can build the images from (php:7.2-apache)  directary. 
+
+
+
+## Note!
+   If you start bacula-dir but no correct DB settings in the bacula-dir.conf, the 
+
+program will stop after some seconds.
