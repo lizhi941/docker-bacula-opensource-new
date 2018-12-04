@@ -28,6 +28,12 @@
 
 
 ## Note!
-   If you start bacula-dir but no correct DB settings in the bacula-dir.conf, the 
+   
+  If you start bacula-dir but no correct DB settings in the bacula-dir.conf, the 
 
-program will stop after some seconds.
+program will stop after some seconds. You can find the scripts file create_mysql_database,
+
+grant_mysql_privileges,make_mysql_tables in the directory  etc/bacula/scripts.
+
+
+
